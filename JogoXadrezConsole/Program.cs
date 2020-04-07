@@ -11,6 +11,8 @@ namespace JogoXadrezConsole
             Tabuleiro tab = new Tabuleiro(8, 8);
 
             Console.WriteLine("Posição: "+P);
+
+            Tela.ImprimirTabuleiro(tab);
         }
     }
 }
