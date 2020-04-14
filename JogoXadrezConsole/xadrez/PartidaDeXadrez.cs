@@ -102,7 +102,7 @@ namespace xadrez
 
         public void ValidarPosicaoDeDestino(Posicao origem, Posicao destino)
         {
-            if (! Tab.peca(origem).PodeMoverPara(destino))
+            if (! Tab.peca(origem).MovimentoPossivel(destino))
             {
                 throw new TabuleiroException("Posição de destino inválida!");
             }
@@ -231,26 +231,42 @@ namespace xadrez
 
         private void ColocarPecas()
         {
-            ColocarNovaPeca('c', 1, new Torre(Tab, Cor.Amarelo));
-            ColocarNovaPeca('d', 1, new Rei(Tab, Cor.Amarelo));
-            ColocarNovaPeca('h', 7, new Torre(Tab, Cor.Amarelo));
+            ColocarNovaPeca('a', 1, new Torre(Tab, Cor.Amarelo));
+            ColocarNovaPeca('b', 1, new Cavalo(Tab, Cor.Amarelo));
+            ColocarNovaPeca('c', 1, new Bispo(Tab, Cor.Amarelo));
+            ColocarNovaPeca('d', 1, new Dama(Tab, Cor.Amarelo));
+            ColocarNovaPeca('e', 1, new Rei(Tab, Cor.Amarelo));
+            ColocarNovaPeca('f', 1, new Bispo(Tab, Cor.Amarelo));
+            ColocarNovaPeca('g', 1, new Cavalo(Tab, Cor.Amarelo));
+            ColocarNovaPeca('h', 1, new Torre(Tab, Cor.Amarelo));
 
-            ColocarNovaPeca('a', 8, new Rei(Tab, Cor.Azul));
-            ColocarNovaPeca('b', 8, new Torre(Tab, Cor.Azul));
-            /* ColocarNovaPeca('c', 1, new Torre(Tab, Cor.Amarelo));
-             ColocarNovaPeca('e', 1, new Torre(Tab, Cor.Amarelo));
-             ColocarNovaPeca('d', 1, new Rei(Tab, Cor.Amarelo));
-             ColocarNovaPeca('c', 2, new Torre(Tab, Cor.Amarelo));
-             ColocarNovaPeca('e', 2, new Torre(Tab, Cor.Amarelo));
-             ColocarNovaPeca('d', 2, new Torre(Tab, Cor.Amarelo));
+            ColocarNovaPeca('a', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('b', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('c', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('d', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('e', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('f', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('g', 2, new Peao(Tab, Cor.Amarelo));
+            ColocarNovaPeca('h', 2, new Peao(Tab, Cor.Amarelo));
 
-             ColocarNovaPeca('c', 8, new Torre(Tab, Cor.Azul));
-             ColocarNovaPeca('e', 8, new Torre(Tab, Cor.Azul));
-             ColocarNovaPeca('d', 8, new Rei(Tab, Cor.Azul));
-             ColocarNovaPeca('c', 7, new Torre(Tab, Cor.Azul));
-             ColocarNovaPeca('e', 7, new Torre(Tab, Cor.Azul));
-             ColocarNovaPeca('d', 7, new Torre(Tab, Cor.Azul));
- */
+
+            ColocarNovaPeca('a', 8, new Torre(Tab, Cor.Azul));
+            ColocarNovaPeca('b', 8, new Cavalo(Tab, Cor.Azul));
+            ColocarNovaPeca('c', 8, new Bispo(Tab, Cor.Azul));
+            ColocarNovaPeca('d', 8, new Dama(Tab, Cor.Azul));
+            ColocarNovaPeca('e', 8, new Rei(Tab, Cor.Azul));
+            ColocarNovaPeca('f', 8, new Bispo(Tab, Cor.Azul));
+            ColocarNovaPeca('g', 8, new Cavalo(Tab, Cor.Azul));
+            ColocarNovaPeca('h', 8, new Torre(Tab, Cor.Azul));
+
+            ColocarNovaPeca('a', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('b', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('c', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('d', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('e', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('f', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('g', 7, new Peao(Tab, Cor.Azul));
+            ColocarNovaPeca('h', 7, new Peao(Tab, Cor.Azul));
         }
     }
 }
